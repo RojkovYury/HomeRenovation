@@ -16,16 +16,17 @@ export default function RightBlock({ currentTag, handleOpen }: RightBlockProps) 
         p: '20px',
         m: '6px',
         width: '1000px', // !
-        display: !currentTag ? 'none' : 'flex',
         flexDirection: 'column',
       }}
     >
+
       <Box sx={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
         <Typography variant="h4">
           {currentTag && currentTag.room}
+          {!currentTag && 'Жилой дом'}
         </Typography>
         <Typography variant="subtitle2">
-          id: {currentTag && currentTag.id}
+          {currentTag && `id: ${currentTag.id}`}
         </Typography>
       </Box>
 
@@ -33,10 +34,18 @@ export default function RightBlock({ currentTag, handleOpen }: RightBlockProps) 
 
       <Typography variant="h5" sx={{ mb: '8px' }}>
         {currentTag && currentTag.title}
+        {!currentTag && 'Первый этаж'}
       </Typography>
 
       <Typography variant="body2">
         {currentTag && currentTag.description}
+        {!currentTag && <>
+          1. Прихожая 15 кв.м.<br/> 
+          2. Гостинная 24 кв.м.<br/> 
+          3. Кухня 22 кв.м.<br/> 
+          4. Гостевая спальня 12 кв.м.<br/> 
+          5. Душевая 4 кв.м.</>
+        }
       </Typography>
 
       {currentTag && currentTag?.pics && (
@@ -61,6 +70,19 @@ export default function RightBlock({ currentTag, handleOpen }: RightBlockProps) 
               />
             </ImageListItem>
           ))}
+        </ImageList>
+      )}
+      {!currentTag && (
+        <ImageList variant="masonry" cols={1} gap={8}>
+          <ImageListItem>
+            <img
+              srcSet={`/images/title0.jpg`}
+              src={`/images/title0.jpg`}
+              alt={'title0'}
+              loading="lazy"
+              style={{ borderRadius: '16px' }}
+            />
+          </ImageListItem>
         </ImageList>
       )}
     </Paper>

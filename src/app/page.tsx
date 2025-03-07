@@ -35,7 +35,7 @@ export default function Main() {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box sx={{ display: 'flex', flexDirection: 'row', maxWidth: '1400px', marginLeft: 'auto', marginRight: 'auto', minHeight: '101vh ', mb: '60px' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'row', maxWidth: '1400px', marginLeft: 'auto', marginRight: 'auto', minHeight: '101vh ', mb: '60px', mt: '18px' }}>
 
         <Box sx={{ m: '6px', width: '524px' }}>
           <Paper elevation={1} sx={{ borderRadius: '8px', width: '482px', p: '20px', position: 'relative' }}>
@@ -43,7 +43,7 @@ export default function Main() {
               sx={{ 
                 width: '482px',
                 height: '600px',
-                background: `url('/images/main-dark.jpg')`, // main-light
+                background: `url('/images/main-dark.jpg')`,
                 backgroundSize: '482px 600px',
               }}
             />
