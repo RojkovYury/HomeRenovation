@@ -35,18 +35,12 @@ export default function Main() {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <Box sx={{ display: 'flex', flexDirection: 'row', maxWidth: '1400px', marginLeft: 'auto', marginRight: 'auto', minHeight: '101vh ', mb: '60px', mt: '18px' }}>
+
+      <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', minWidth: '536px', maxWidth: '1400px', marginLeft: 'auto', marginRight: 'auto', minHeight: '101vh ', mb: '60px', mt: '18px' }}>
 
         <Box sx={{ m: '6px', width: '524px' }}>
           <Paper elevation={1} sx={{ borderRadius: '8px', width: '482px', p: '20px', position: 'relative' }}>
-            <Box 
-              sx={{ 
-                width: '482px',
-                height: '600px',
-                background: `url('/images/main-dark.jpg')`,
-                backgroundSize: '482px 600px',
-              }}
-            />
+            <Box sx={{ width: '482px', height: '600px', background: `url('/images/main-dark.jpg')`, backgroundSize: '482px 600px' }} />
             <GeneralRoomTags currentTag={currentTag} setCurrentTag={setCurrentTag} generalRoomTagsVisibility={generalRoomTagsVisibility} />
             <RoomTags currentTag={currentTag} setCurrentTag={setCurrentTag} roomTagsVisibility={roomTagsVisibility} />
             <QuestionRoomTags currentTag={currentTag} setCurrentTag={setCurrentTag} questionRoomTagsVisibility={questionRoomTagsVisibility} />
@@ -60,9 +54,14 @@ export default function Main() {
             questionRoomTagsVisibility={questionRoomTagsVisibility}
             setQuestionRoomTagsVisibility={setQuestionRoomTagsVisibility}
           />
+
+          <RightBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { sm: 'flex', md: 'none' } }} />
+
           <AccordionItems handleOpen={handleOpen}/>
         </Box>
-        <RightBlock currentTag={currentTag} handleOpen={handleOpen} />
+
+        <RightBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { sm: 'none', md: 'flex' } }} />
+
         <Dialog open={open} onClose={handleClose}>
           <img onClick={handleClose} src={selectedImage} alt="" style={{ width: '100%', height: 'auto' }} />
         </Dialog>

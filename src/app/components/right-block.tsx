@@ -5,18 +5,21 @@ import { CurrentTag } from "../page";
 interface RightBlockProps {
   currentTag?: CurrentTag;
   handleOpen: any;
+  paperSx?: any;
 }
 
-export default function RightBlock({ currentTag, handleOpen }: RightBlockProps) {
+export default function RightBlock({ currentTag, handleOpen, paperSx }: RightBlockProps) {
   return (
     <Paper
-      elevation={2}
+      elevation={1}
       sx={{
         borderRadius: '8px',
         p: '20px',
-        m: '6px',
-        width: '1000px', // !
+        mt: '6px',
+        mb: '8px',
+        width: '484px',
         flexDirection: 'column',
+        ...paperSx,
       }}
     >
 
