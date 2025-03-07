@@ -18,8 +18,8 @@ export default function RightBlock({ currentTag, handleOpen, paperSx }: RightBlo
         mt: '6px',
         mb: '8px',
         width: '484px',
-        flexDirection: 'column',
         ...paperSx,
+        flexDirection: 'column',
       }}
     >
 

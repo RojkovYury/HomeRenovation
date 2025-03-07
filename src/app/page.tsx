@@ -55,12 +55,12 @@ export default function Main() {
             setQuestionRoomTagsVisibility={setQuestionRoomTagsVisibility}
           />
 
-          <RightBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { sm: 'flex', md: 'none' } }} />
+          <RightBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }} />
 
           <AccordionItems handleOpen={handleOpen}/>
         </Box>
 
-        <RightBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { sm: 'none', md: 'flex' } }} />
+        <RightBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }} />
 
         <Dialog open={open} onClose={handleClose}>
           <img onClick={handleClose} src={selectedImage} alt="" style={{ width: '100%', height: 'auto' }} />
