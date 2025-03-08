@@ -33,9 +33,11 @@ export default function RightBlock({ currentTag, handleOpen, paperSx }: RightBlo
           {currentTag && currentTag.room}
           {!currentTag && 'Жилой дом'}
         </Typography>
+        {/*
         <Typography variant="subtitle2">
           {currentTag && `id: ${currentTag.id}`}
         </Typography>
+        */}
       </Box>
 
       <Divider sx={{ my: '8px' }}/>
