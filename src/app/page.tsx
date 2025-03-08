@@ -10,7 +10,9 @@ import QuestionRoomTags from "./components/question-room-tags";
 import AccordionItems from "./components/accordion-items";
 import ScrollButton from "./components/scroll-button";
 import MapFooter from "./components/map-footer";
-import RightBlock from "./components/right-block";
+import InfoBlock from "./components/info-block";
+import InfoBlockEmpty from "./components/info-block-empty";
+
 
 export interface CurrentTag {
   id: string;
@@ -22,10 +24,11 @@ export interface CurrentTag {
 
 export default function Main() {
   const [currentTag, setCurrentTag] = useState<CurrentTag | undefined>();
-  const [open, setOpen] = useState(false);
+  const [imgOpen, setImgOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
-  const handleOpen = (img: string) => { setSelectedImage(img); setOpen(true); };
-  const handleClose = () => { setOpen(false); setSelectedImage(''); };
+  const handleOpen = (img: string) => { setSelectedImage(img); setImgOpen(true); };
+  const handleClose = () => { setImgOpen(false); setSelectedImage(''); };
+
   const theme = useTheme();
   const imageSrc = theme.palette.mode === 'dark' 
     ? '/images/main-dark.jpg' 
@@ -83,14 +86,16 @@ export default function Main() {
           questionRoomTagsVisibility={questionRoomTagsVisibility}
           setQuestionRoomTagsVisibility={setQuestionRoomTagsVisibility}
         />
-        {currentTag && (<RightBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }} />)}
+        {currentTag && (<InfoBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }} />)}
+        {!currentTag && <InfoBlockEmpty paperSx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }} />}
         <AccordionItems handleOpen={handleOpen}/>
       </Box>
 
       {/* Right side */}
-      <RightBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }} />
+      {currentTag && <InfoBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }} />}
+      {!currentTag && <InfoBlockEmpty paperSx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }} />}
 
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={imgOpen} onClose={handleClose}>
         <img onClick={handleClose} src={selectedImage} alt="" style={{ width: '100%', height: 'auto' }} />
       </Dialog>
       <ScrollButton />
