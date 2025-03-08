@@ -13,16 +13,21 @@ export default function RightBlock({ currentTag, handleOpen, paperSx }: RightBlo
     <Paper
       elevation={1}
       sx={{
-        borderRadius: '8px',
+        borderRadius: {
+          xs: '0px 0px 0px 0px',
+          sm: '16px 16px 0px 0px',
+          md: '16px 16px 0px 0px',
+        },
         p: '20px',
-        mt: '6px',
+        mt: '8px',
+        mr: { xs: '0px', sm: '0px', md: '8px' },
         mb: '8px',
-        width: '484px',
+        width: { xs: 'none', sm: 'none', md: '600px' },
+        minWidth: { xs: 'none', sm: 'none', md: '300px' },
         ...paperSx,
         flexDirection: 'column',
       }}
     >
-
       <Box sx={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
         <Typography variant="h4">
           {currentTag && currentTag.room}
@@ -35,7 +40,7 @@ export default function RightBlock({ currentTag, handleOpen, paperSx }: RightBlo
 
       <Divider sx={{ my: '8px' }}/>
 
-      <Typography variant="h5" sx={{ mb: '8px' }}>
+      <Typography variant="h5" sx={{ mb: '8px' }} >
         {currentTag && currentTag.title}
         {!currentTag && 'Первый этаж'}
       </Typography>

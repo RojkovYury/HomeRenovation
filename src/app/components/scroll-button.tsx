@@ -9,7 +9,7 @@ interface ScrollButtonProps {
 export default function ScrollButton({ handleOpen }: ScrollButtonProps) {
   const [showButton, setShowButton] = useState(false);
   const handleScroll = () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 150) {
       setShowButton(true);
     } else {
       setShowButton(false);
