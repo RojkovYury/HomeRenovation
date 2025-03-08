@@ -13,7 +13,6 @@ import MapFooter from "./components/map-footer";
 import InfoBlock from "./components/info-block";
 import InfoBlockEmpty from "./components/info-block-empty";
 
-
 export interface CurrentTag {
   id: string;
   room?: string;
@@ -86,13 +85,13 @@ export default function Main() {
           questionRoomTagsVisibility={questionRoomTagsVisibility}
           setQuestionRoomTagsVisibility={setQuestionRoomTagsVisibility}
         />
-        {currentTag && (<InfoBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }} />)}
+        {currentTag && (<InfoBlock currentTag={currentTag} setCurrentTag={setCurrentTag} handleOpen={handleOpen} paperSx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }} />)}
         {!currentTag && <InfoBlockEmpty paperSx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }} />}
         <AccordionItems handleOpen={handleOpen}/>
       </Box>
 
       {/* Right side */}
-      {currentTag && <InfoBlock currentTag={currentTag} handleOpen={handleOpen} paperSx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }} />}
+      {currentTag && <InfoBlock currentTag={currentTag} setCurrentTag={setCurrentTag} handleOpen={handleOpen} paperSx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }} />}
       {!currentTag && <InfoBlockEmpty paperSx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }} />}
 
       <Dialog open={imgOpen} onClose={handleClose}>

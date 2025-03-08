@@ -29,13 +29,6 @@ export default function GeneralRoomTags({ currentTag, setCurrentTag, generalRoom
           width: '40px',
           top: el.top,
           left: el.left,
-          // scale: currentTag?.id === el.id ? '1.3' : '1',
-          /*
-          - xs: 0px -599px
-          - sm: 600px - 899px
-          - md: 900px - 1199px
-          - lg: 1200px
-          */
           scale: {
             xs: currentTag?.id === el.id ? '1' : '0.85',
             sm: currentTag?.id === el.id ? '1.3' : '1',
@@ -54,4 +47,3 @@ export default function GeneralRoomTags({ currentTag, setCurrentTag, generalRoom
     ))
   )
 }
-// display: { xs: 'none', sm: 'none', md: 'flex' }

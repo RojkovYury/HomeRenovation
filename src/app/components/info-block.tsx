@@ -1,14 +1,57 @@
 /* eslint-disable @next/next/no-img-element */
-import { Box, Divider, ImageList, ImageListItem, Paper, Typography } from "@mui/material";
+import { Box, Divider, IconButton, ImageList, ImageListItem, Paper, Typography } from "@mui/material";
 import { CurrentTag } from "../page";
+import { generalRoomTags } from "../general-room-tags";
+import { roomTags } from "../room-tags";
+import { questionRoomTags } from "../question-room-tags";
+import { Dispatch, SetStateAction } from "react";
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 interface InfoBlockProps {
   currentTag?: CurrentTag;
+  setCurrentTag: Dispatch<SetStateAction<CurrentTag | undefined>>;
   handleOpen: any;
   paperSx?: any;
 }
 
-export default function InfoBlock({ currentTag, handleOpen, paperSx }: InfoBlockProps) {
+export default function InfoBlock({ currentTag, setCurrentTag, handleOpen, paperSx }: InfoBlockProps) {
+  const nextTag = () => {
+    let currentDb;
+    if (currentTag) {
+      if (currentTag.id.startsWith('generalRoomTags')) {
+        currentDb = generalRoomTags;
+      } else if (currentTag.id.startsWith('roomTags')) {
+        currentDb = roomTags;
+      } else if (currentTag.id.startsWith('questionTags')) {
+        currentDb = questionRoomTags;
+      }
+      const currentIndex = currentDb?.findIndex((tag) => tag.id === currentTag.id);
+      if (currentIndex !== -1) {
+        const nextIndex = currentDb && currentIndex !== undefined ? (currentIndex + 1) % currentDb.length : 0;
+        currentDb && setCurrentTag(currentDb[nextIndex]);
+      }
+    }
+  };
+
+  const prevTag = () => {
+    let currentDb;
+    if (currentTag) {
+      if (currentTag.id.startsWith('generalRoomTags')) {
+          currentDb = generalRoomTags;
+      } else if (currentTag.id.startsWith('roomTags')) {
+          currentDb = roomTags;
+      } else if (currentTag.id.startsWith('questionTags')) {
+          currentDb = questionRoomTags;
+      }
+      const currentIndex = currentDb?.findIndex((tag) => tag.id === currentTag.id);
+      if (currentIndex !== -1) {
+        const prevIndex = currentDb && currentIndex !== undefined ? (currentIndex - 1 + currentDb.length) % currentDb.length : 0;
+        currentDb && setCurrentTag(currentDb[prevIndex]);
+      }
+    }
+  };
+
   return (
     <Paper
       elevation={1}
@@ -32,6 +75,14 @@ export default function InfoBlock({ currentTag, handleOpen, paperSx }: InfoBlock
         <Typography variant="h4">
           {currentTag && currentTag.room}
         </Typography>
+        <Box>
+          <IconButton size="small" onClick={prevTag}>
+            <ArrowBackIosNewIcon />
+          </IconButton>
+          <IconButton size="small" onClick={nextTag}>
+            <ArrowForwardIosIcon />
+          </IconButton>
+        </Box>
         {/*
         <Typography variant="subtitle2">
           {currentTag && `id: ${currentTag.id}`}
