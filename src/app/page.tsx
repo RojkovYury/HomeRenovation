@@ -2,6 +2,7 @@
 "use client"
 
 import { Box, Dialog, Paper } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 import { useState } from "react";
 import RoomTags from "./components/room-tags";
 import GeneralRoomTags from "./components/general-room-tags";
@@ -25,6 +26,10 @@ export default function Main() {
   const [selectedImage, setSelectedImage] = useState('');
   const handleOpen = (img: string) => { setSelectedImage(img); setOpen(true); };
   const handleClose = () => { setOpen(false); setSelectedImage(''); };
+  const theme = useTheme();
+  const imageSrc = theme.palette.mode === 'dark' 
+    ? '/images/main-dark.jpg' 
+    : '/images/main-light.jpg';
 
   const [generalRoomTagsVisibility, setGeneralRoomTagsVisibility] = useState(true);
   const [roomTagsVisibility, setRoomTagsVisibility] = useState(true);
@@ -64,7 +69,7 @@ export default function Main() {
           }}
         >
           <Box sx={{ p: '12px' }}>
-            <img src='/images/main-dark.jpg' alt="" style={{ width: '100%', height: '100%' }} />
+            <img src={imageSrc} alt="" style={{ width: '100%', height: '100%' }} />
           </Box>
           <GeneralRoomTags currentTag={currentTag} setCurrentTag={setCurrentTag} generalRoomTagsVisibility={generalRoomTagsVisibility} />
           <RoomTags currentTag={currentTag} setCurrentTag={setCurrentTag} roomTagsVisibility={roomTagsVisibility} />
