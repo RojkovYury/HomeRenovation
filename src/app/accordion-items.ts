@@ -28,7 +28,7 @@ const accordionTags = [
     pics: [],
   },
   {
-    id: 'accordionTags_2',
+    id: 'accordionTags_3',
     title: 'Стены',
     description: '',
     pics: [],
