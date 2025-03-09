@@ -105,7 +105,7 @@ export default function InfoBlock({ currentTag, setCurrentTag, handleOpen, paper
 
       {currentTag?.links && (
         currentTag?.links.map((el, index) => (
-          <Link target={"_blank"} href={el}>Ссылка {index + 1}</Link>
+          <Link target={"_blank"} href={el} key={index}>Ссылка {index + 1}</Link>
         ))
       )}
 
@@ -114,7 +114,7 @@ export default function InfoBlock({ currentTag, setCurrentTag, handleOpen, paper
           variant="masonry"
           cols={currentTag?.pics.length === 1 
             ? 1
-            : currentTag?.pics.length > 2 && currentTag?.pics.length < 6
+            : currentTag?.pics.length > 1 && currentTag?.pics.length < 6
               ? 2 
               : 3}
           gap={8}

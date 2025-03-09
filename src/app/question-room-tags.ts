@@ -63,6 +63,17 @@ const questionRoomTags = [
     `,
     pics: [],
   },
+  {
+    id: 'questionTags_spalnya_0',
+    top: '87%',
+    left: '81%',
+    room: 'Гостевая спальня',
+    description: `
+      Окно в спальне, в которое утром жестко бьет Солнце. </br>
+      Продумать блэкаут при условиии размещения стола вдоль окна.
+    `,
+    pics: [],
+  },
 ]
 
 export { questionRoomTags };

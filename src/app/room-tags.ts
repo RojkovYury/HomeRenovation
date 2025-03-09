@@ -16,7 +16,11 @@ const roomTags = [
     left: '50.5%',
     room: 'Коридор',
     title: 'Входная дверь',
-    description: '',
+    description: `
+      Рассматриваем вариант смены входной двери под новый стиль. </br>
+      Должно быть сочетание коричневого кирпича снаружи и интерьера внутри. </br>
+      Ручка внутри не должна открываться собаками.</br></br>
+    `,
     pics: [
       'https://tula.zsdoor.ru/upload/resizer2/1/cb1/cb1c7c19f39e50c1ee99db4901e259c0.jpg',
     ],
@@ -32,17 +36,22 @@ const roomTags = [
       Шкаф не используется для хранения всей массы одежды, только текущая сезонная плюс что-то накинуть для гостей на вечер.
       </br>
       Необходимы отделения для шапок/перчаток и принадлежностей для выгула собак.
+      </br></br>
+      Очень нравится такая компоновка:
     `,
-    pics: [],
+    pics: ['https://i.pinimg.com/736x/82/56/fb/8256fb6f3c9055f1c5fc571bab742209.jpg'],
   },
   {
     id: 'roomTags_coridor_2',
     top: '69%',
     left: '63%',
     room: 'Коридор',
-    title: 'Шкаф для мелочи + скамья',
-    description: '',
-    pics: [],
+    title: 'Отделение для мелочи + скамья',
+    description: 'В этот угол поставить небольшое отделение для мелочовки и второе место для обувания, перпендикулярно друг другу',
+    pics: [
+      'https://i.pinimg.com/736x/79/48/e8/7948e864270ac4dc5bdae3f7ff3579b7.jpg',
+      'https://i.pinimg.com/736x/b8/7d/da/b87ddad1273dd928efbaa6d1fa8ff254.jpg',
+    ],
   },
   {
     id: 'roomTags_gostinaya_0',
@@ -100,6 +109,61 @@ const roomTags = [
       'https://i.pinimg.com/736x/30/43/d4/3043d4e19196da5098a1b707bc8aa725.jpg',
       'https://i.pinimg.com/736x/2c/88/bd/2c88bd8086ecfab2d37cc8fe129e8f03.jpg',
       'https://i.pinimg.com/736x/ae/01/b0/ae01b0dbf247b48f8b64e560c4258491.jpg',
+    ],
+  },
+  {
+    id: 'roomTags_spalnya_0',
+    top: '61%',
+    left: '81%',
+    room: 'Гостевая спальня',
+    title: 'Шкаф',
+    description: `
+      </br>
+    `,
+    pics: [
+
+    ],
+  },
+  {
+    id: 'roomTags_spalnya_1',
+    top: '71%',
+    left: '89%',
+    room: 'Гостевая спальня',
+    title: 'Кровать',
+    description: `
+      Ногами к выходу - вообще пофиг
+      </br>
+    `,
+    pics: [
+
+    ],
+  },
+  {
+    id: 'roomTags_spalnya_2',
+    top: '71%',
+    left: '71%',
+    room: 'Гостевая спальня',
+    title: 'ТВ зона',
+    description: `
+      </br>
+    `,
+    pics: [
+
+    ],
+  },
+  {
+    id: 'roomTags_spalnya_3',
+    top: '82%',
+    left: '81%',
+    room: 'Гостевая спальня',
+    title: 'Стол',
+    description: `
+      Стол должен совмещать рабочее пространство под ноутбук и дамский уголок.
+      </br>
+      (по сути два посадочных места).
+    `,
+    pics: [
+
     ],
   },
 ]
