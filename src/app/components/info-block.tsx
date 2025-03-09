@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Box, Divider, IconButton, ImageList, ImageListItem, Paper, Typography } from "@mui/material";
+import { Box, Divider, IconButton, ImageList, ImageListItem, Link, Paper, Typography } from "@mui/material";
 import { CurrentTag } from "../page";
 import { generalRoomTags } from "../general-room-tags";
 import { roomTags } from "../room-tags";
@@ -16,6 +16,9 @@ interface InfoBlockProps {
 }
 
 export default function InfoBlock({ currentTag, setCurrentTag, handleOpen, paperSx }: InfoBlockProps) {
+  
+  console.log(currentTag);
+  
   const nextTag = () => {
     let currentDb;
     if (currentTag) {
@@ -99,6 +102,12 @@ export default function InfoBlock({ currentTag, setCurrentTag, handleOpen, paper
       {currentTag && currentTag.description && 
         <Typography variant="body2" dangerouslySetInnerHTML={{ __html: currentTag.description }}/>
       }
+
+      {currentTag?.links && (
+        currentTag?.links.map((el, index) => (
+          <Link target={"_blank"} href={el}>Ссылка {index + 1}</Link>
+        ))
+      )}
 
       {currentTag && currentTag?.pics && (
         <ImageList

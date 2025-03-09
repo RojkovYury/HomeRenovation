@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
 
-import { Box, Dialog, Paper } from "@mui/material";
+import { Box, Dialog, Link, Paper } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { useState } from "react";
 import RoomTags from "./components/room-tags";
@@ -19,6 +19,7 @@ export interface CurrentTag {
   title?: string;
   description?: string;
   pics?: string[];
+  links?: string[];
 }
 
 export default function Main() {

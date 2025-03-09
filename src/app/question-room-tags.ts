@@ -32,6 +32,14 @@ const questionRoomTags = [
     description: 'Окно смотрящее в стену соседнего дома и на небольшой кусок неиспользуемого участка, минимум естественного света.',
   },
   {
+    id: 'questionTags_cuhnya_3',
+    top: '14%',
+    left: '21%',
+    room: 'Кухня',
+    description: '',
+    pics: ['https://sun9-46.userapi.com/impg/TcLzaONDdYrra-pSuRIaZx2Lwhi9F5Zrnt5vFg/PVrK_aP-Fog.jpg?size=1280x1280&quality=95&sign=62686ceec10b92b4745849f9c0afa5a2&type=album',],
+  },
+  {
     id: 'questionTags_gostinaya_0',
     top: '70%',
     left: '2%',

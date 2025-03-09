@@ -6,6 +6,7 @@ interface roomTag {
   title?: string;
   description: string;
   pics?: string[];
+  links?: string[];
 }
 
 const roomTags = [
@@ -16,6 +17,10 @@ const roomTags = [
     room: 'Коридор',
     title: 'Входная дверь',
     description: '',
+    pics: [
+      'https://tula.zsdoor.ru/upload/resizer2/1/cb1/cb1c7c19f39e50c1ee99db4901e259c0.jpg',
+    ],
+    links: ['https://tula.zsdoor.ru/catalog/elitnye-dveri/elitnaya-dver-4.html'],
   },
   {
     id: 'roomTags_coridor_1',
@@ -86,7 +91,15 @@ const roomTags = [
       </br>
     `,
     pics: [
-      'https://sun9-46.userapi.com/impg/TcLzaONDdYrra-pSuRIaZx2Lwhi9F5Zrnt5vFg/PVrK_aP-Fog.jpg?size=1280x1280&quality=95&sign=62686ceec10b92b4745849f9c0afa5a2&type=album',
+      'https://i.pinimg.com/736x/20/af/1b/20af1be477429cfad6af4d652396f8c4.jpg',
+      'https://i.pinimg.com/736x/3b/de/0b/3bde0b557df7e453a948164c58067561.jpg',
+      'https://i.pinimg.com/736x/9a/36/21/9a362172f79b49ed10d97b5e214c7305.jpg',
+      'https://i.pinimg.com/736x/1b/67/80/1b6780d4dc84e2418ff7b5957026a382.jpg',
+      'https://i.pinimg.com/736x/4c/ed/6f/4ced6f9ddce9faa1485dcc1a3a9c9108.jpg',
+      'https://i.pinimg.com/736x/62/a5/69/62a569a5e88021b677e8caf2d2e3d49e.jpg',
+      'https://i.pinimg.com/736x/30/43/d4/3043d4e19196da5098a1b707bc8aa725.jpg',
+      'https://i.pinimg.com/736x/2c/88/bd/2c88bd8086ecfab2d37cc8fe129e8f03.jpg',
+      'https://i.pinimg.com/736x/ae/01/b0/ae01b0dbf247b48f8b64e560c4258491.jpg',
     ],
   },
 ]
