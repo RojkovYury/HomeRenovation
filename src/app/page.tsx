@@ -71,7 +71,7 @@ export default function Main() {
           }}
         >
           <Box sx={{ p: '12px' }}>
-            <img src={imageSrc} alt="" style={{ width: '100%', height: '100%' }} />
+            <img src={imageSrc} alt="" style={{ width: '100%', height: '100%' }} onClick={() => setCurrentTag(undefined)} />
           </Box>
           <GeneralRoomTags currentTag={currentTag} setCurrentTag={setCurrentTag} generalRoomTagsVisibility={generalRoomTagsVisibility} />
           <RoomTags currentTag={currentTag} setCurrentTag={setCurrentTag} roomTagsVisibility={roomTagsVisibility} />
