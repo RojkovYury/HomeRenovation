@@ -96,9 +96,9 @@ export default function InfoBlock({ currentTag, setCurrentTag, handleOpen, paper
         {currentTag && currentTag.title}
       </Typography>
 
-      <Typography variant="body2">
-        {currentTag && currentTag.description}
-      </Typography>
+      {currentTag && currentTag.description && 
+        <Typography variant="body2" dangerouslySetInnerHTML={{ __html: currentTag.description }}/>
+      }
 
       {currentTag && currentTag?.pics && (
         <ImageList

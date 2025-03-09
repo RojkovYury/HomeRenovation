@@ -18,7 +18,6 @@ export default function AccordionItems({ handleOpen }: AccordionItemsProps) {
           </AccordionSummary>
           <AccordionDetails>
           <Typography variant="subtitle2" dangerouslySetInnerHTML={{ __html: row.description }} />
-
             <ImageList
               variant="masonry"
               cols={2}
