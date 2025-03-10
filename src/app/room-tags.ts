@@ -279,6 +279,45 @@ const roomTags = [
 
     ],
   },
+  {
+    id: 'roomTags_dush_0',
+    top: '49%',
+    left: '77%',
+    room: 'Душевая',
+    title: 'Раковина',
+    description: `
+      </br>
+    `,
+    pics: [
+
+    ],
+  },
+  {
+    id: 'roomTags_dush_1',
+    top: '49%',
+    left: '82%',
+    room: 'Душевая',
+    title: 'Унитаз',
+    description: `
+      </br>
+    `,
+    pics: [
+
+    ],
+  },
+  {
+    id: 'roomTags_dush_2',
+    top: '53%',
+    left: '89%',
+    room: 'Душевая',
+    title: 'Душ',
+    description: `
+      </br>
+    `,
+    pics: [
+
+    ],
+  },
 ]
 
 export { roomTags };
