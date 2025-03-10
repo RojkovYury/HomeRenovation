@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client"
 
-import { Box, Dialog, Link, Paper } from "@mui/material";
+import { Box, Dialog, Paper } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { useState } from "react";
 import RoomTags from "./components/room-tags";
@@ -78,6 +78,7 @@ export default function Main() {
           <RoomTags currentTag={currentTag} setCurrentTag={setCurrentTag} roomTagsVisibility={roomTagsVisibility} />
           <QuestionRoomTags currentTag={currentTag} setCurrentTag={setCurrentTag} questionRoomTagsVisibility={questionRoomTagsVisibility} />
         </Paper>
+
         <MapFooter
           generalRoomTagsVisibility={generalRoomTagsVisibility}
           setGeneralRoomTagsVisibility={setGeneralRoomTagsVisibility} 

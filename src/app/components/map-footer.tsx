@@ -5,6 +5,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import RoomIcon from '@mui/icons-material/Room';
 import AdjustIcon from '@mui/icons-material/Adjust';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+import DownloadIcon from '@mui/icons-material/Download';
 
 interface MapFooterProps {
   generalRoomTagsVisibility?: boolean;
@@ -52,6 +53,11 @@ export default function MapFooter(props: MapFooterProps) {
       </Box>
 
       <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <a href={'/images/main.jpg'} download style={{ textDecoration: 'none', display: 'inline-block' }}>
+          <IconButton color="info" size="small" >
+            <DownloadIcon fontSize="small" />
+          </IconButton>
+        </a>
         <IconButton
           size="small"
           onClick={() => {
