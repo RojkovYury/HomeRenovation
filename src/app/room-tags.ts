@@ -39,7 +39,15 @@ const roomTags = [
       </br></br>
       Очень нравится такая компоновка:
     `,
-    pics: ['https://i.pinimg.com/736x/82/56/fb/8256fb6f3c9055f1c5fc571bab742209.jpg'],
+    pics: [
+      'https://i.pinimg.com/736x/82/56/fb/8256fb6f3c9055f1c5fc571bab742209.jpg',
+      'https://i.pinimg.com/736x/b2/17/f8/b217f88dbc1e72fba83b498cf0091ce4.jpg',
+      'https://i.pinimg.com/736x/52/55/e3/5255e3360a44dee21ecbdced03e837ba.jpg',
+      'https://i.pinimg.com/736x/89/87/4e/89874ec75943910d229752e69685e08a.jpg',
+      'https://i.pinimg.com/736x/11/49/6f/11496f07414b8d8af71efda0a7440f6e.jpg',
+      'https://i.pinimg.com/736x/51/cc/59/51cc5936bf656b00256d3af6aa7fc51d.jpg',
+      'https://i.pinimg.com/736x/0b/4d/35/0b4d359b63c1f1bfe2058aabd6e55bfb.jpg',
+    ],
   },
   {
     id: 'roomTags_coridor_2',
@@ -97,7 +105,9 @@ const roomTags = [
     room: 'Кухня',
     title: 'Дверь на улицу',
     description: `
+      Объеденить окно и дверь в одну прозрачную большую дверь.
       </br>
+      Выпускать собак на улицу и летом носить продукты из кухни через маленькую дверь крайне не удобно. 
     `,
     pics: [
       'https://i.pinimg.com/736x/20/af/1b/20af1be477429cfad6af4d652396f8c4.jpg',
@@ -109,6 +119,109 @@ const roomTags = [
       'https://i.pinimg.com/736x/30/43/d4/3043d4e19196da5098a1b707bc8aa725.jpg',
       'https://i.pinimg.com/736x/2c/88/bd/2c88bd8086ecfab2d37cc8fe129e8f03.jpg',
       'https://i.pinimg.com/736x/ae/01/b0/ae01b0dbf247b48f8b64e560c4258491.jpg',
+    ],
+  },
+  {
+    id: 'roomTags_cuhnya_1',
+    top: '32%',
+    left: '8%',
+    room: 'Кухня',
+    title: 'Левая сторона',
+    description: `
+      Как вариант стол/барная стойка совмещенный с островом.
+      </br></br>
+      Небольшая зона для собак с поилкой.
+      </br></br>
+      Вдоль стены (напротив камина) холодильник для напитков.</br>
+      Сейчас есть мини холодильник на кухне, им активно пользуемся, и места не хватате.
+      Бутылки с алкоголем различной формы, газированные напитки, соки.
+      </br>
+      Так же скапливается много подарочных бутылок вина и шампанского.
+    `,
+    pics: [
+      'https://i.pinimg.com/736x/32/fc/43/32fc434cb52cb52851cedd832725d23f.jpg',
+      'https://i.pinimg.com/736x/26/92/4a/26924af1d63ee811f87e37c447e82f81.jpg',
+    ],
+  },
+  {
+    id: 'roomTags_cuhnya_2',
+    top: '43%',
+    left: '38%',
+    room: 'Кухня',
+    title: 'Шкаф стена',
+    description: `
+      Очень нравится идея "завернуть" шкаф с полками по стене.</br>
+      А "достроенную" часть стены надо убирать.
+    `,
+    pics: [
+      'https://i.pinimg.com/736x/2c/85/25/2c8525b6a3b03a3381b447e7dc6591f0.jpg',
+      'https://i.pinimg.com/736x/d3/ca/e1/d3cae13fe10021381f56127f59a876f9.jpg',
+      'https://i.pinimg.com/736x/ca/80/f1/ca80f17c91fc5fefa2388477291b53a5.jpg',
+      'https://i.pinimg.com/736x/f5/a3/0f/f5a30f952afe7bb3ba358073cfb564ac.jpg',
+      'https://i.pinimg.com/736x/dd/bb/cb/ddbbcb1b6b0b6a298c97ecb171036247.jpg',
+    ],
+  },
+  {
+    id: 'roomTags_spalnya_0',
+    top: '61%',
+    left: '81%',
+    room: 'Гостевая спальня',
+    title: 'Шкаф',
+    description: `
+      </br>
+    `,
+    pics: [
+
+    ],
+  },
+    {
+    id: 'roomTags_cuhnya_2',
+    top: '43%',
+    left: '38%',
+    room: 'Кухня',
+    title: 'Шкаф стена',
+    description: `
+      Очень нравится идея "завернуть" шкаф с полками по стене.</br>
+      А "достроенную" часть стены надо убирать.
+    `,
+    pics: [
+      'https://i.pinimg.com/736x/2c/85/25/2c8525b6a3b03a3381b447e7dc6591f0.jpg',
+      'https://i.pinimg.com/736x/d3/ca/e1/d3cae13fe10021381f56127f59a876f9.jpg',
+      'https://i.pinimg.com/736x/ca/80/f1/ca80f17c91fc5fefa2388477291b53a5.jpg',
+      'https://i.pinimg.com/736x/f5/a3/0f/f5a30f952afe7bb3ba358073cfb564ac.jpg',
+      'https://i.pinimg.com/736x/dd/bb/cb/ddbbcb1b6b0b6a298c97ecb171036247.jpg',
+    ],
+  },
+  {
+    id: 'roomTags_cuhnya_3',
+    top: '34%',
+    left: '44%',
+    room: 'Кухня',
+    title: 'Зона готовки',
+    description: `
+      Прямая столешница.</br>
+      Две комфорки? Я просто не могу представить ситуацию, когда может понадобится сразу больше двух одновременно,
+      с учетом микроволновки, электрочайника и плиты от того же электричества.</br>
+      Мы не самого большого роста, надо уточнять высоту столешницы.
+    `,
+    pics: [
+      'https://i.pinimg.com/736x/44/ff/ad/44ffad43d4f37a0b6799657ca65ca0ab.jpg',
+      'https://i.pinimg.com/736x/ce/9f/4a/ce9f4ae7b14e7481791a73ddab725940.jpg',
+      'https://i.pinimg.com/736x/2f/55/58/2f55583a26ca07c9822f81e97c0a9d51.jpg',
+      'https://i.pinimg.com/736x/69/25/21/6925212d35da3fe51ede9c0dabe4645c.jpg',
+    ],
+  },
+  {
+    id: 'roomTags_cuhnya_4',
+    top: '23%',
+    left: '42%',
+    room: 'Кухня',
+    title: 'Шкаф стена 2',
+    description: `
+      Безумно нравится концепция, когда шкаф идет по стене и в него "впадает" столешница:
+    `,
+    pics: [
+      'https://i.pinimg.com/736x/09/1e/80/091e800cc1a401bced0c182a116a7ddf.jpg',
     ],
   },
   {
