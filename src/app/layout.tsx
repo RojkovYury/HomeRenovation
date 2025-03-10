@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 alignItems: 'center',
               }}
             >
-              <Fab sx={{ height: '26px', minHeight: '26px', width: '26px' }} color="info">
+              <Fab sx={{ height: '26px', minHeight: '26px', width: '26px' }} color="info" onClick={toggleTheme}>
                 <DarkModeIcon sx={{ fontSize: '20px' }}  />
               </Fab>
               <Switch checked={isDarkMode} onChange={toggleTheme} color="info"/>

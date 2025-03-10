@@ -13,7 +13,10 @@ const accordionTags = [
     id: 'accordionTags_0',
     title: 'Цветовые схемы',
     description: '',
-    pics: [],
+    pics: [
+      'https://i.pinimg.com/736x/f7/2c/7e/f72c7e569c3997f9ab452a7de3205b6b.jpg',
+      'https://i.pinimg.com/736x/ff/a1/e8/ffa1e864869f8e96deb709f0129bfd15.jpg',
+    ],
   },
   {
     id: 'accordionTags_1',
